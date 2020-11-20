@@ -3,14 +3,14 @@
 
 ;; Packages
 (prelude-require-packages
-  '(gruvbox-theme
+  '(modus-operandi-theme
      gnu-elpa-keyring-update
      powerline
      airline-themes))
 
 ;; Color theme
-(when (member 'gruvbox-theme package-selected-packages)
-  (load-theme 'gruvbox-light-hard t)
+(when (member 'modus-operandi package-selected-packages)
+  (load-theme 'modus-operandi t)
   (setq prelude-theme (car custom-enabled-themes))
   ;; Disable theme background color in terminal
   ;;  set-face-background with window-setup-hook and after-make-frame-functions
