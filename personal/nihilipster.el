@@ -3,13 +3,15 @@
 
 ;; Packages
 (prelude-require-packages
-  '(modus-operandi-theme
+  '(modus-themes
+     modus-operandi-theme
      gnu-elpa-keyring-update
      powerline
      airline-themes))
 
 ;; Color theme
 (when (member 'modus-operandi package-selected-packages)
+  (require 'modus-themes)
   (load-theme 'modus-operandi t)
   (setq prelude-theme (car custom-enabled-themes))
   ;; Disable theme background color in terminal
